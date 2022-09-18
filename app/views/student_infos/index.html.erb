@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Student infos</h1>
+
+<%= link_to "New student info", new_student_info_path %>
+
+
+<div id="student_infos">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">Geneder</th>
+        <th scope="col">Occuption</th>
+        <th scope="col">Matrial Status</th>
+        <th scope="col">Show</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @student_infos.each do |student_info| %>
+        <%= render student_info %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
